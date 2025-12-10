@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    string s = "hello";
+    int n = s.length();
+
+    int start = 0;
+    int end = n-1;
+    while(start<end){
+        int temp = s[start];
+        s[start] = s[end];
+        s[end] = temp;
+
+        start++;
+        end--;
+    }
+
+    cout << "Reversed = " << s;
+}
